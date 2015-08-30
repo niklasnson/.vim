@@ -1,6 +1,6 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-syntax enable                     " Turn on syntax highlighting.
+set nocompatible                   " be iMproved, required
+filetype off                       " required
+syntax enable                      " Turn on syntax highlighting.
 "filetype plugin indent on         " Turn on file type detection.
 
 " set the runtime path to include Vundle and initialize
@@ -16,6 +16,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
+
+" if you adde plugins run: vim +BundleInstall +qall
+
 
 set t_Co=25
 set showcmd			  								" display incomplete commandis
