@@ -16,9 +16,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'jlanzarotta/bufexplorer'
 
 " if you adde plugins run: vim +BundleInstall +qall
-
 
 set t_Co=25
 set showcmd			  								" display incomplete commandis
@@ -57,7 +57,6 @@ let NERDTreeIgnore = ['\.pyc$']
 let g:ctrlp_working_path_mode = ''
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.DS_Store,*.aux,*.out,*.toc,tmp,*.scssc,*.pyc,tags
 set wildmenu
-
 
 " We do utf-8
 scriptencoding utf-8
