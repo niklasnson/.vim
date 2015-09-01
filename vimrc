@@ -17,6 +17,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'rizzatti/dash.vim'
 
 " if you adde plugins run: vim +BundleInstall +qall
 
