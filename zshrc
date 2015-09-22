@@ -112,4 +112,5 @@ alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 eval "$(rbenv init -)"
-
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
