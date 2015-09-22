@@ -103,19 +103,13 @@ alias lla='ls -lah'
 
 alias ri='ri -f ansi'
 
-alias gold2='ruby ~/Projects/personal/fuse2x/fuse.rb'
-alias gold1='cd Projects/personal/digger/ && ruby digger.rb && cd ~/'
-
 alias imac='ssh niklasnson@10.0.1.16'
 alias air='ssh niklasnson@10.0.1.15'
 
 alias update='brew update && brew upgrade'
-alias backup='mackup backup'
 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 eval "$(rbenv init -)"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
