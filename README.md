@@ -7,5 +7,6 @@ cd .vim
 cp vimrc ~/.vimrc
 cp gvimrc ~/.gvimrc
 cp zshrc ~/.zshrc
+cp gitignore_global ~/.gitigonore_global
 vim +BundleInstall +qall
 ```
