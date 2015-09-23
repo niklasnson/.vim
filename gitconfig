@@ -1,0 +1,8 @@
+[user]
+	name = Niklas Nson
+	email = niklasnson@me.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
