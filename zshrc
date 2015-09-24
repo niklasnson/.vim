@@ -114,3 +114,4 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+eval "$(/usr/libexec/path_helper -s)"
