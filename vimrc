@@ -8,16 +8,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kien/ctrlp.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
 
 " if you adde plugins run: vim +BundleInstall +qall
 
@@ -50,8 +50,7 @@ set expandtab			  							" use spaces instead of tabs
 
 "Nerdtree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-nmap <C-u> :NERDTreeToggle<CR>
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeIgnore = ['\.pyc$']
 
 " CtrlP related settings
@@ -67,6 +66,7 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+nmap <C-u> :NERDTreeToggle<CR>
 
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
