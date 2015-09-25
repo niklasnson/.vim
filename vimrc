@@ -21,46 +21,108 @@ Plugin 'tpope/vim-rails'
 
 " if you adde plugins run: vim +BundleInstall +qall
 
-set t_Co=25
-set showcmd			  								" display incomplete commandis
-set showmode			  							" display the mode you're in.
-set backspace=indent,eol,start	  " intuitive backspacing.
-set hidden			  								" handle multiple buffers better.
-set wildmenu                      " enhanced command line completion.
-set wildmode=list:longest         " complete files like a shell.
-set ignorecase                    " case-insensitive searching.
-set smartcase                     " but case-sensitive if expression contains a capital letter.
-set ruler			  									" show the cursor position all the time
-set incsearch			  							" do incremental searching
-set relativenumber
-set incsearch                     " highlight matches as you type.
-set hlsearch                      " highlight matches.
-set wrap                          " turn on line wrapping.
-set scrolloff=3                   " show 3 lines of context around the cursor.
-set title                         " set the terminal's title
-set visualbell                    " no beeping.
-set nobackup                      " don't make a backup before overwriting a file.
-set nowritebackup                 " and again.
-set backupdir=/tmp		  					" set backupdir to temp
-set autoindent			  						" always set autoindenting on
-set history=50			  						" keep 50 lines of command line history
-set tabstop=2			  							" global tab width.
-set shiftwidth=2		  						" and again, related.
-set expandtab			  							" use spaces instead of tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               GENERAL
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+" Allows reusing a window without saving first
+set hidden
+" Command-line completion
+set wildmenu
+" Show current command
+set showcmd
+" Allow mouse usage
+set mouse=a
+set ruler
+" Always show bottom bar
+set laststatus=2
+" Ask if you wish to save instead of failing command
+set confirm
 
-"Nerdtree
+set encoding=utf8
+scriptencoding utf-8
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               Eyecandy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"highlight current row
+set cursorline
+" Enable Syntax highlighting
+syntax enable
+" Visual bell instead of beeping
+set visualbell
+" filetype specific highlighting and intentation
+filetype plugin indent on
+
+" Display line numbers on the left
+set number
+set confirm
+" keep at least 5 lines above/below
+set scrolloff=5                     
+" keep at least 5 lines left/right
+set sidescrolloff=5    
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Searching 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight search
+set hlsearch
+set ignorecase
+set smartcase
+
+" partial search while searching
+set incsearch
+set wrapscan
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               Indentation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Width of tab character. Unused if expandtab is set
+set tabstop=4
+" Legth of tabs created with <<>>
+set shiftwidth=4
+" Number of spaces to use instead of tab if expandtab is set
+set softtabstop=4
+" Use spaces instead of tabs
+set expandtab
+set autoindent
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               Undo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set history=1000
+" save undo's after file closes
+set undofile                        
+" where to save undo histories
+set undodir=$HOME/.vim/undo         
+" how many undos
+set undolevels=1000                 
+" number of lines to save for undo
+set undoreload=10000
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               NerdTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeIgnore = ['\.pyc$']
 
-" CtrlP related settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = ''
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.DS_Store,*.aux,*.out,*.toc,tmp,*.scssc,*.pyc,tags
-set wildmenu
 
-" We do utf-8
-scriptencoding utf-8
-set encoding=utf-8
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               Mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Split row at cursor
+nnoremap <leader>c i<CR><Esc>
+" Reset search with ctrl-l
+nnoremap <C-L> :nohl<CR><C-L>
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
