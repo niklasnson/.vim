@@ -45,7 +45,7 @@ HIST_STAMPS="mm.dd.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler git)
+plugins=(brew bundler git pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,6 +70,9 @@ export ARCHFLAGS="-arch x86_64"
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# MacTex
+eval `/usr/libexec/path_helper -s`
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -82,14 +85,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 c() { cd ~/Projects/$1; }
 _c() { _files -W ~/Projects -/; }
 compdef _c c
-
-h() { cd ~/$1; }
-_h() { _files -W ~/ -/; }
-compdef _h h
-
-dropbox() { cd ~/Dropbox/$1; }
-_dropbox() { _files -W ~/Dropbox -/; }
-compdef _dropbox dropbox
 
 alias -- -="cd -"
 alias ..="cd .."
@@ -114,4 +109,3 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-eval "$(/usr/libexec/path_helper -s)"
