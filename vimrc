@@ -97,11 +97,11 @@ set autoindent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set history=1000
-" save undo's after file closes
-set undofile                        
+set history=1000                    
 " where to save undo histories
-set undodir=$HOME/.vim/undo         
+set undodir=~/.vim/undo         
+" save undo's after file closes
+set undofile    
 " how many undos
 set undolevels=1000                 
 " number of lines to save for undo
