@@ -99,7 +99,13 @@ set autoindent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=1000                    
 " where to save undo histories
-set undodir=~/.vim/undo         
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/.undos")
+    call mkdir($HOME."/.vim/.undos", "", 0700)
+endif
+set undodir=~/.vim/.undos         
 " save undo's after file closes
 set undofile    
 " how many undos
