@@ -39,6 +39,11 @@ set laststatus=2
 " Ask if you wish to save instead of failing command
 set confirm
 
+" Folding
+set foldmethod=syntax
+set foldlevel=20
+
+" We do utf8
 set encoding=utf8
 scriptencoding utf-8
 
@@ -123,6 +128,7 @@ set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jp
 nnoremap <leader>c i<CR><Esc>
 " Reset search with ctrl-l
 nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <Space> za
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
