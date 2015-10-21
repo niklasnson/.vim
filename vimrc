@@ -108,6 +108,7 @@ endif
 if !isdirectory($HOME."/.vim/.undos")
     call mkdir($HOME."/.vim/.undos", "", 0700)
 endif
+" where to save undo histories
 set undodir=~/.vim/.undos         
 " save undo's after file closes
 set undofile    
