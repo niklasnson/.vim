@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jlanzarotta/bufexplorer'
@@ -47,6 +46,10 @@ set foldlevel=20
 set encoding=utf8
 scriptencoding utf-8
 
+" Spelling 
+set spelllang=en_us
+" mark bad spelled words with red
+highlight SpellErrors gui=underline ctermfg=Red guifg=Red
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Eyecandy
@@ -115,13 +118,6 @@ set undoreload=10000
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                               NerdTree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeIgnore = ['\.pyc$']
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = ''
@@ -140,7 +136,6 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
-nmap <C-u> :NERDTreeToggle<CR>
 
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
