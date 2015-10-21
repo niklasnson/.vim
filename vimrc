@@ -23,6 +23,7 @@ Plugin 'tpope/vim-rails'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               GENERAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible
 " Allows reusing a window without saving first
 set hidden
@@ -47,7 +48,10 @@ set encoding=utf8
 scriptencoding utf-8
 
 " Spelling 
-set spelllang=en_us
+" Toggle spell checking on and off with `,s`
+let mapleader = ","
+nmap <silent> <leader>s :set spell!<CR>
+set spell spelllang=en_us
 " mark bad spelled words with red
 highlight SpellErrors gui=underline ctermfg=Red guifg=Red
 
