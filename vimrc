@@ -92,11 +92,11 @@ set wrapscan
 "                               Indentation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Width of tab character. Unused if expandtab is set
-set tabstop=4
+set tabstop=2
 " Legth of tabs created with <<>>
-set shiftwidth=4
+set shiftwidth=2
 " Number of spaces to use instead of tab if expandtab is set
-set softtabstop=4
+set softtabstop=2
 " Use spaces instead of tabs
 set expandtab
 set autoindent
