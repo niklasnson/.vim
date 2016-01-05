@@ -85,6 +85,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# ---- gcc compiler alias 
+alias g++11="g++ -Wall -Wextra -Weffc++ -Wold-style-cast -Woverloaded-virtual -std=c++11 -pedantic -Werror"
+
 alias la='ls -a'
 alias ll='ls -lh'
 alias lla='ls -lah'
