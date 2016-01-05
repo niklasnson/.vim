@@ -17,20 +17,25 @@ mkdir -pv ~/Projects/shared
 mkdir -pv ~/Projects/simple
 mkdir -pv ~/Projects/tarballs
 mkdir -pv ~/Projects/workbench
+
 echo
 echo "Cloning some projects I follow"
 echo "========================================================================================================="
 echo 
 
-git clone git@github.com:rails/rails.git ~/Projects/followed
-git clone git@github.com:assemblymade/coderwall.git ~/Projects/followed
-git clone git@github.com:bbatsov/rails-style-guide.git ~/Projects/docs
-git clone git@github.com:rubysherpas/forem.git ~/Projects/followed
-git clone git@github.com:iwasrobbed/Brevidy.git ~/Projects/followed
-git clone git@github.com:sharetribe/sharetribe.git ~/Projects/followed
-git clone git@github.com:denkGroot/Spina.git ~/Projects/followed
-git clone git@github.com:rubygems/rubygems.org.git ~/Projects/followed
-git clone git@github.com:hotsh/rstat.us.git ~/Projects/followed
-git clone git@github.com:jcs/lobsters.git ~/Projects/followed
-git clone git@github.com:gitlabhq/gitlabhq.git ~/Projects/followed
+cd ~/Projects/followed
+git clone git@github.com:rails/rails.git
+git clone git@github.com:assemblymade/coderwall.git
+git clone git@github.com:rubysherpas/forem.git 
+git clone git@github.com:iwasrobbed/Brevidy.git
+git clone git@github.com:sharetribe/sharetribe.git
+git clone git@github.com:denkGroot/Spina.git
+git clone git@github.com:rubygems/rubygems.org.git
+git clone git@github.com:hotsh/rstat.us.git
+git clone git@github.com:jcs/lobsters.git
+git clone git@github.com:gitlabhq/gitlabhq.git
+git clone git@github.com:feedbin/feedbin.git
+
+cd ~/Projects/docs/
+git clone git@github.com:bbatsov/rails-style-guide.git 
 

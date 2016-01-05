@@ -91,6 +91,11 @@ alias lla='ls -lah'
 
 alias ri='ri -f ansi'
 
+alias start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
+alias cprint='a2ps -2 --line-numbers=1 -r --columns=2 -g'
+
 alias imac='ssh niklasnson@10.0.1.16'
 alias air='ssh niklasnson@10.0.1.15'
 
